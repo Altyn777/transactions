@@ -8,7 +8,9 @@ npm install
 
 ## To use default input.json:
 
-`npm run start`
+```
+npm run start
+```
 
 ## To use any other json file:
 
@@ -19,4 +21,6 @@ node app.js path/custom_input.json
 
 ## To run tests
 
-`npm run test`
+```
+npm run test
+```
