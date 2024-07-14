@@ -1,8 +1,8 @@
 import { jest } from "@jest/globals";
-jest.mock("../src/utils/rounding.js", () => ({
+jest.mock("./rounding.js", () => ({
   ceilToCurrencyUnit: jest.fn().mockImplementation((amount) => amount)
 }));
-import { getCashOutJuridicalFee } from "../src/utils/cashOutJuridical.js";
+import { getCashOutJuridicalFee } from "./cashOutJuridical.js";
 
 describe("getCashOutJuridicalFee", () => {
   it("returns the minimum amount if calculated fee is below minimum", () => {

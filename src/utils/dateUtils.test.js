@@ -1,4 +1,4 @@
-import { getEndOfWeek } from "../src/utils/dateUtils.js";
+import { getEndOfWeek } from "./dateUtils.js";
 
 describe("getEndOfWeek", () => {
   it("should return the end of the week for a given date", () => {

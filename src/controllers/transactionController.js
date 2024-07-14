@@ -13,7 +13,7 @@ const UserType = {
   JURIDICAL: "juridical"
 };
 
-export function processTransactions(
+export function calculateTransactionsFees(
   transactions,
   { cashInConfig, cashOutNaturalConfig, cashOutJuridicalConfig }
 ) {

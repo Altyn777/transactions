@@ -1,6 +1,6 @@
-import { getCashOutNaturalFee } from "../src/utils/cashOutNatural.js";
+import { getCashOutNaturalFee } from "./cashOutNatural.js";
 import { jest } from "@jest/globals";
-jest.mock("../src/utils/rounding.js", () => ({
+jest.mock("./rounding.js", () => ({
   ceilToCurrencyUnit: jest.fn((amount) => amount)
 }));
 

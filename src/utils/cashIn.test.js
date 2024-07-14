@@ -1,4 +1,4 @@
-import { getCashInFee } from "../src/utils/cashIn.js";
+import { getCashInFee } from "./cashIn.js";
 
 describe("getCashInFee", () => {
   it("calculates the cash-in fee", () => {

@@ -1,4 +1,4 @@
-import { createApiClient } from "./../src/config/config";
+import { createApiClient } from "./config";
 
 describe("createApiClient", () => {
   it("fetches configuration successfully from an API", async () => {

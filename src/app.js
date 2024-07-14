@@ -1,16 +1,16 @@
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 
-import { loadConfigurations } from "./api/cashConfigApi.js";
+import { loadConfigurations } from "./api/cashApiConfig.js";
 import { logError } from "./utils/logger.js";
 import { readTransactions } from "./utils/fileReader.js";
-import { processTransactions } from "./business/transactionProcessor.js";
+import { calculateTransactionsFees } from "./controllers/transactionController.js";
 
 export const main = async (filePath) => {
   try {
     const configs = await loadConfigurations();
     const transactions = await readTransactions(filePath);
-    const fees = processTransactions(transactions, configs);
+    const fees = calculateTransactionsFees(transactions, configs);
     fees.map(({ fee }) => console.log(fee));
   } catch (error) {
     logError(error);
