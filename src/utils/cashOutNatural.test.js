@@ -1,8 +1,9 @@
-import { getCashOutNaturalFee } from "./cashOutNatural.js";
 import { jest } from "@jest/globals";
-jest.mock("./rounding.js", () => ({
+jest.unstable_mockModule("./rounding", () => ({
   ceilToCurrencyUnit: jest.fn((amount) => amount)
 }));
+
+const { getCashOutNaturalFee } = await import("./cashOutNatural");
 
 describe("getCashOutNaturalFee", () => {
   it("returns zero fee and zero array when total is below the week limit", () => {

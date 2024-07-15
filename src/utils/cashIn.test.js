@@ -1,4 +1,10 @@
-import { getCashInFee } from "./cashIn.js";
+import { jest } from "@jest/globals";
+
+jest.unstable_mockModule("./rounding", () => ({
+  ceilToCurrencyUnit: jest.fn((it) => it)
+}));
+
+const { getCashInFee } = await import("./cashIn");
 
 describe("getCashInFee", () => {
   it("calculates the cash-in fee", () => {

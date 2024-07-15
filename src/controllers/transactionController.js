@@ -38,7 +38,7 @@ export function calculateTransactionsFees(
         const [roundedFee, fee] = getCashOutNaturalFee(
           cashOutNaturalConfig,
           totalWeekAmount[user_id],
-          previousFees[user_id]
+          previousFees[user_id] || 0
         );
         previousFees[user_id] = (previousFees[user_id] || 0) + fee;
         return { fee: roundedFee };
