@@ -3,7 +3,7 @@ import { ceilToCurrencyUnit } from "./rounding.js";
 export const getCashOutNaturalFee = (
   { percents, week_limit },
   total,
-  previousFee = 0
+  previousFee
 ) => {
   let fee = 0;
   if (total > week_limit.amount) {
